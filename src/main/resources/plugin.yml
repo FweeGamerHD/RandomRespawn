@@ -1,0 +1,6 @@
+name: RandomRespawn
+version: '${project.version}'
+main: freegamerdev.freegamerdev.RandomRespawn
+api-version: 1.19
+authors: [ FreeGamer ]
+description: A simple Plugin that makes Players always randomly respawn in the world withing a configurable area.
