@@ -16,7 +16,7 @@ public final class RandomRespawn extends JavaPlugin {
         ConfigUtil config = new ConfigUtil(this, "config.yml");
         if(config.getConfig().getKeys(false).isEmpty()) {
             //set default values
-            config.getConfig().set("radius", 5000);
+            config.getConfig().set("area", 5000);
             config.save();
         }
 
