@@ -12,10 +12,15 @@ public final class RandomRespawn extends JavaPlugin {
         // Plugin startup logic
         Bukkit.getLogger().info("RandomRespawn has been initialized.");
 
+        //check if config file is empty
         ConfigUtil config = new ConfigUtil(this, "config.yml");
-        config.getConfig().set("radius", 5000);
-        config.save();
+        if(config.getConfig().getKeys(false).isEmpty()) {
+            //set default values
+            config.getConfig().set("radius", 5000);
+            config.save();
+        }
 
+        //register event handlers
         new PlayerHandler(this, config);
     }
 
